@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bookmark</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header d-flex justify-content-center align-items-center ">
+            <h1 class="text-capitalize fw-bold display-5">bookmarker</h1>
+           
+           
+        </div>
+        <hr>
+        <div class="content">
+            <div class="title d-flex flex-row justify-content-center align-items-center">
+                <i class="fa-solid fa-bookmark fs-3 mt-1"></i><h3 class="m-2">Bookmark your favorite sites</h3><i class="fa-solid fa-bookmark fs-3 mt-1"></i>
+            </div>
+            <div>
+                 <div class="mb-3">
+                    <i class="fa-solid fa-book-bookmark"></i> <label for="formGroupExampleInput" class="form-label text-capitalize fw-bold ms-1">site name</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Bookmark Name" oninput="validateUsername()">
+                    <small id="nameError" class="text-danger fw-medium d-none">website name must start with special character</small>
+                    <div id="mssg"></div>
+                  </div>
+                  <div class="mb-3">
+                    <i class="fa-solid fa-link"></i><label for="formGroupExampleInput2" class="form-label text-capitalize fw-bold ms-1">site URL</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Website URL" oninput="validateUrl()">
+                    <small id="urlError" class="text-danger fw-medium d-none">website name must start with special character</small>
+
+                  </div>
+                  <div class="button d-flex justify-content-center align-items-center">
+                    <button class="btn fw-medium text-capitalize" onclick="addWebsite()">submit</button>
+                  </div>
+                 
+            </div>
+            <hr>
+            <table class="table text-white mb-0 text-center rounded-2 overflow-hidden">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="websiteInfo">
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
